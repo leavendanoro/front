@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  academy-fe:
+    container_name: academy-fe
+    build:
+      context: .
+    command: npm start
+    volumes:
+      - ./:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "3006:3006"
